@@ -1,12 +1,4 @@
 [[package]]
-name = "autocorrect"
-version = "2.5.1"
-description = "Spelling Corrector"
-category = "main"
-optional = false
-python-versions = ">=3.6"
-
-[[package]]
 name = "click"
 version = "8.0.3"
 description = "Composable command line interface toolkit"
@@ -88,12 +80,9 @@ numpy = ">=1.13.1"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.9"
-content-hash = "0e9073924790155650a686460b06934fc2dd6c5a47bbd86c2e1dcf2b1266d40e"
+content-hash = "78f807c54390e9ece3ed0341807b14798b8065a10585d1d586df2f9b2eec8204"
 
 [metadata.files]
-autocorrect = [
-    {file = "autocorrect-2.5.1.tar.gz", hash = "sha256:f44103a71fed78bc349010e4ca4e8a791b058ecfcae491888488d6c47aa390ea"},
-]
 click = [
     {file = "click-8.0.3-py3-none-any.whl", hash = "sha256:353f466495adaeb40b6b5f592f9f91cb22372351c84caeb068132442a4518ef3"},
     {file = "click-8.0.3.tar.gz", hash = "sha256:410e932b050f5eed773c4cda94de75971c89cdb3155a72a0831139a79e5ecb5b"},

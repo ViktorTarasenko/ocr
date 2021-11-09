@@ -10,7 +10,6 @@ pytesseract="*"
 opencv-python="*"
 click="*"
 pdf2image="*"
-autocorrect="*"
 symspellpy="*"
 [tool.poetry.dev-dependencies]
 

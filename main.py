@@ -133,6 +133,7 @@ def main(input_path, output, verbose):
         result = post_process(reduce(lambda x, y: x + y, texts))
         with open(output, "w") as output_file:
             output_file.write(result)
+        log("Written output result to file: %s", output)
     except OSError as e:
         print(e)
     except PDFPageCountError as e:
