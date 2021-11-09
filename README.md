@@ -1,4 +1,4 @@
-To run app:
-  Install tesseract-ocr
-  Install poetry
-  Intall python dependencies: poetry update
+# To run app
+- Install tesseract-ocr
+- Install poetry
+- Install python dependencies: poetry update
