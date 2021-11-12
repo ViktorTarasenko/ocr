@@ -26,6 +26,10 @@ sym_spell.load_dictionary(dictionary_path, term_index=0, count_index=1)
 sym_spell.load_bigram_dictionary(bigram_path, term_index=0, count_index=2)
 
 
+class OcrError(Exception):
+    pass
+
+
 def get_file_extension(path):
     return os.path.splitext(path)[1]
 
@@ -39,10 +43,6 @@ def read_images(path):
         return convert_from_path(path)
     else:
         raise OcrError("Unsupported file type: {0}".format(ext))
-
-
-class OcrError(Exception):
-    pass
 
 
 def preprocess_image(image):
@@ -67,11 +67,6 @@ def turn_image_to_grayscale(image):
 def resize_image(image):
     log("Resizing image...")
     return cv2.resize(image, None, fx=4, fy=4, interpolation=cv2.INTER_LINEAR)
-
-
-def binarize_image(image):
-    log("Binarizing image...")
-    return cv2.adaptiveThreshold(image, 255, cv2.ADAPTIVE_THRESH_MEAN_C, cv2.THRESH_BINARY, 5, 20)
 
 
 def remove_noise(image):
