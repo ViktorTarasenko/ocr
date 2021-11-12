@@ -9,14 +9,12 @@ import numpy
 import numpy as np
 import pkg_resources
 import pytesseract
-from autocorrect import Speller
 from pdf2image import convert_from_path
 from pdf2image.exceptions import PDFPageCountError
 from PIL import Image
 from symspellpy import SymSpell
 
 logger = getLogger(__name__)
-speller = Speller()
 sym_spell = SymSpell(max_dictionary_edit_distance=2, prefix_length=7)
 dictionary_path = pkg_resources.resource_filename(
     "symspellpy", "frequency_dictionary_en_82_765.txt")
@@ -115,7 +113,10 @@ def log(message, *args, **kwargs):
 
 
 @click.command()
-@click.option("--input", 'input_path', help="Input file name. Can be jpeg, png, pdf", prompt=True)
+@click.option("--input",
+              'input_path',
+              help="Input file name. Can be jpeg, png, pdf",
+              prompt=True)
 @click.option("--output", help="Output file name", prompt=True)
 @click.option("--verbose", is_flag=True, default=False)
 def main(input_path, output, verbose):
